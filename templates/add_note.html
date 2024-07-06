@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-note">
+    <h1>Add Note</h1>
+    <form method="post" enctype="multipart/form-data">
+        <div>
+            <label for="type">Note Type:</label>
+            <select id="type" name="type" onchange="showNoteInput()">
+                <option value="text">Text</option>
+                <option value="audio">Audio</option>
+                <option value="video">Video</option>
+            </select>
+        </div>
+        <div id="text-input" style="display: block;">
+            <label for="text">Text:</label>
+            <textarea id="text" name="text"></textarea>
+        </div>
+        <div id="file-input" style="display: none;">
+            <label for="file">Upload File:</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <button type="submit">Add Note</button>
+    </form>
+</div>
+<script src="{{ url_for('static', filename='JS/script.js') }}"></script>
+{% endblock %}

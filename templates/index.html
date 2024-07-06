@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1>Welcome to Task Manager</h1>
+    <p class="lead">Manage your tasks efficiently and effectively.</p>
+    <a class="btn btn-primary btn-lg m-2" href="{{ url_for('add_task') }}" role="button">Add New Task</a>
+    <a class="btn btn-primary btn-lg m-2" href="{{ url_for('my_video') }}" role="button">See video !</a>
+</div>
+<div class="image_container">
+    <img src="{{ url_for('static', filename='IMG/header.png') }}" alt="idk" width="700px" height="300px" class="image-fluid">
+</div>
+
+{% endblock %}
+

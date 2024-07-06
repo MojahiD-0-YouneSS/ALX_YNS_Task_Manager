@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-notes container-note">
+    <h1>View Notes</h1>
+    {% if notes %}
+    {% for note in notes %}
+    <div class="note row">
+        <div class="col-10">
+        {% if note.note_type  == 'text' %}
+        <p>{{ note.content }}  {{ note.iid }}</p>
+        {% elif note.note_type  == 'audio' %}
+        <audio controls>
+            <source src="{{ url_for('static', filename='uploads/' ~ note.content) }}" type="audio/wav">
+        </audio>
+        {% elif note.note_type  == 'video' %}
+        <video width="320" height="240" controls>
+            <source src="{{ url_for('static', filename='uploads/' ~ note.content) }}" type="video/mp4">
+        </video>
+        {% endif %}
+        </div>
+        <div class="col-2">
+           <a class="btn btn-danger ms-3" href="{{ url_for('delete_note', note_id=note.id) }}"> delete note </a>
+       </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p class="alert-warning">not notes found</p>
+    {% endif  %}
+</div>
+{% endblock %}
+
