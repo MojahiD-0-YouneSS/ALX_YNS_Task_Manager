@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-info">
+    <header>
+        <h1>YNS Task Manager</h1>
+        <p>A simple and efficient task management application.</p>
+        <nav>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('info') }}">Info</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="mt-4">
+        <h2>About the Project</h2>
+        <p>The YNS Task Manager is designed to help you keep track of your tasks efficiently. Whether you're managing personal to-dos or work-related tasks, this application provides a user-friendly interface to add, view, edit, and delete tasks with ease.</p>
+    </div>
+    <div class="mt-4">
+        <h2>Contact</h2>
+        <p>Github<a href="https://github.com/MojahiD-0-YouneSS">git to me</a>. Linkden<a href="https://www.linkedin.com/in/youness-mojahid-146b40274/">Link to me</a>
+    </div>
+    <div class="mt-4">
+        <p>go to app<a href="https://youness00mojahid.pythonanywhere.com/" class="btn btn-success">Go to Deployed Application</a></p>
+    </div>
+</div>
+{% endblock %}
+

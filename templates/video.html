@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Local Video Player</h1>
+    <div class="video-selection mb-3">
+        <button class="btn btn-secondary" onclick="loadVideo('{{ url_for('static', filename='IMG/video1.mp4') }}')">Video 1: into</button>
+        <button class="btn btn-secondary" onclick="loadVideo('{{ url_for('static', filename='IMG/video2.mp4') }}')">Video 2: featre 1</button>
+        <button class="btn btn-secondary" onclick="loadVideo('{{ url_for('static', filename='IMG/video3.mp4') }}')">Video 3: featre 2 and 3</button>
+        <button class="btn btn-secondary" onclick="loadVideo('{{ url_for('static', filename='IMG/video4.mp4') }}')">Video 4: what's next</button>
+    </div>
+    <video id="myVideo" width="600" controls>
+        <source id="videoSource" src="{{ url_for('static', filename='IMG/video1.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="controls mt-3">
+        <button class="btn btn-primary" onclick="playVideo()">Play</button>
+        <button class="btn btn-warning" onclick="pauseVideo()">Pause</button>
+        <button class="btn btn-danger" onclick="stopVideo()">Stop</button>
+        <button class="btn btn-success"><a href="/" class="nav-link btn btn-success">Home</a></button>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='JS/script.js') }}"></script>
+
+{% endblock %}
+

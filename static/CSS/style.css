@@ -1,0 +1,113 @@
+.video-selection {
+    margin-bottom: 20px;
+}
+
+video {
+    border: 2px solid #007bff;
+    border-radius: 5px;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container-info {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.container-note {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container-note nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.container-note nav a:hover{
+    text-decoration: underline;
+}
+
+.container-note form div{
+    margin-bottom: 10px;
+}
+
+.container-note label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container-note input, .container-note textarea, .container-note select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.note {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.note p {
+    margin: 0;
+    padding: 0;
+}
+
+.note audio,
+.note video {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+}
